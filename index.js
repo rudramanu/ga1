@@ -28,6 +28,7 @@ app.post("/generateResponse", async (req, res) => {
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `Shayari in Hindi about ${prompt}`,
+      max_tokens: 500,
     });
     console.log("hi");
     console.log(response.data.choices[0].text);
