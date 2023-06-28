@@ -26,7 +26,7 @@ app.post("/generateResponse", async (req, res) => {
     }
     console.log("hello");
     const response = await openai.createCompletion({
-      model: "gpt-3.5-turbo",
+      model: "text-davinci-003",
       prompt: `Shayari in Hindi about ${prompt}`,
     });
     console.log("hi");
