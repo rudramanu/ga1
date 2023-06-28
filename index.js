@@ -27,8 +27,8 @@ app.post("/generateResponse", async (req, res) => {
     console.log("hello");
     const response = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: `Shayari in Hindi about ${prompt}`,
-      max_tokens: 500,
+      prompt: `you can assume yourself as Shri Krishna and give some enlightment to use as written in Bhagwat Gita in Hindi by using this keyword ${prompt}`,
+      max_tokens: 1000,
     });
     console.log("hi");
     console.log(response.data.choices[0].text);
