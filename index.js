@@ -27,7 +27,7 @@ app.post("/generateResponse", async (req, res) => {
     console.log("hello");
     const response = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: prompt,
+      prompt: `Shayari about ${prompt}`,
     });
     console.log("hi");
     console.log(response.data.choices[0].text);
